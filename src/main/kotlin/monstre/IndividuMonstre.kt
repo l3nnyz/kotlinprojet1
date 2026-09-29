@@ -20,6 +20,7 @@ class IndividuMonstre(
     var entraineur: Any? = null, // Remplacer Any? par Entraineur? si la classe existe dans votre projet
     expInit: Double = 0.0
 ) {
+
     var niveau: Int = 1
     var attaque: Int = espece.baseAttaque + Random.nextInt(-2, 3)
     var defense: Int = espece.baseDefense + Random.nextInt(-2, 3)
@@ -101,7 +102,7 @@ class IndividuMonstre(
     fun attaquer(cible: IndividuMonstre) {
         val degats = (this.attaque - (cible.defense / 2)).coerceAtLeast(1)
         cible.pv -= degats
-        println("$nom attaque ${cible.nom} et lui inflige$degats dégâts !")
+        println("$nom attaque ${cible.nom} et lui inflige$degats degâts !")
     }
 
     /**
@@ -109,10 +110,10 @@ class IndividuMonstre(
      * Si l'utilisateur entre un texte vide, le nom n'est pas modifié.
      */
     fun renommer() {
-        print("Entrez le nouveau nom pour $nom (laisser vide pour ne pas changer) : ")
+        print("Entrez le nouveau nom pour $nom (laisser vide pour pas changer) : ")
         val nouveauNom = readlnOrNull()?.trim()
         if (!nouveauNom.isNullOrEmpty()) {
-            println("$nom est désormais renommé en $nouveauNom.")
+            println("$nom est renommé en $nouveauNom.")
             this.nom = nouveauNom
         } else {
             println("Nom inchangé.")
