@@ -1,7 +1,7 @@
 package org.example.combat
 
+import org.example.joueur
 import org.example.monstre.IndividuMonstre
-import org.example.entraineur.joueur // On importe le joueur global ou passe-le en argument selon ton projet
 
 class CombatMonstre(
     var monstreJoueur: IndividuMonstre,

@@ -1,6 +1,7 @@
 package org.example.monde
 
 import org.example.combat.CombatMonstre
+import org.example.joueur
 import org.example.monstre.EspeceMonstre
 import org.example.monstre.IndividuMonstre
 import kotlin.random.Random
